@@ -143,10 +143,14 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           
           <Link href="/" className="flex items-center gap-3.5 group">
-            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-amber-400 via-emerald-400 to-teal-500 p-[1.5px] shadow-lg shadow-emerald-500/10 group-hover:shadow-emerald-500/25 transition-all">
-              <div className="w-full h-full bg-[#06090e] rounded-[14px] flex items-center justify-center font-black text-base text-amber-400 tracking-tighter">
-                FT
-              </div>
+            <div className="relative w-12 h-12 rounded-2xl overflow-hidden border border-amber-400/30 shadow-lg shadow-amber-400/15 group-hover:scale-105 group-hover:border-amber-400/60 transition-all">
+              <Image
+                src="/icon.png"
+                alt="Futures Tools Logo"
+                fill
+                priority
+                className="object-cover"
+              />
             </div>
             <div>
               <div className="font-bold text-lg tracking-tight text-white flex items-center gap-2">
@@ -518,20 +522,33 @@ export default function HomePage() {
       {/* ======================================================== */}
       {/* 6. FOOTER */}
       {/* ======================================================== */}
-      <footer className="border-t border-white/[0.08] bg-[#04060a] py-12 px-6">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-400">
-          <div className="flex items-center gap-3">
-            <div className="font-extrabold text-white tracking-tight">FUTURES TOOLS</div>
-            <span>&bull;</span>
-            <span>Independent Directory &bull; futurestools.site</span>
+      <footer className="border-t border-white/[0.08] bg-[#04060a] py-14 px-6">
+        <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8 text-xs text-slate-400">
+          <div className="space-y-3">
+            <div className="flex items-center gap-3.5">
+              <div className="relative w-9 h-9 rounded-xl overflow-hidden border border-amber-400/30">
+                <Image src="/icon.png" alt="Futures Tools Logo" fill className="object-cover" />
+              </div>
+              <span className="font-extrabold text-base text-white tracking-tight">FUTURES TOOLS</span>
+              <span className="text-slate-600">&bull;</span>
+              <span className="text-amber-400 font-semibold font-mono text-[11px] px-2 py-0.5 rounded bg-amber-400/10 border border-amber-400/20">Futurestools86 LLC</span>
+            </div>
+            <div className="text-[11px] text-slate-400 leading-relaxed max-w-lg">
+              Operating Entity: <strong className="text-slate-200">Futurestools86 LLC</strong> &bull; Managing Director: <strong className="text-white font-semibold">HOANG NGOC ANH</strong><br />
+              Business &amp; Strategic Partnerships: <a href="mailto:partners@futurestools.site" className="text-amber-400 hover:underline">partners@futurestools.site</a> | <a href="mailto:contact@futurestools.site" className="text-amber-400 hover:underline">contact@futurestools.site</a>
+            </div>
           </div>
-          <div className="flex items-center gap-6 font-mono text-[11px]">
-            <Link href="/go/railway" className="hover:text-amber-400">Railway</Link>
-            <Link href="/go/superpower" className="hover:text-amber-400">Superpower</Link>
-            <Link href="/go/ocura" className="hover:text-amber-400">Ocura Life</Link>
-            <Link href="/go/scentbird" className="hover:text-amber-400">Scentbird</Link>
-            <Link href="/go/lovable" className="hover:text-amber-400">Lovable</Link>
+          <div className="flex flex-wrap items-center gap-6 font-mono text-[11px] text-slate-300">
+            <Link href="/go/railway" className="hover:text-amber-400 transition-colors">Railway Cloud</Link>
+            <Link href="/go/superpower" className="hover:text-amber-400 transition-colors">Superpower Health</Link>
+            <Link href="/go/ocura" className="hover:text-amber-400 transition-colors">Ocura Life</Link>
+            <Link href="/go/scentbird" className="hover:text-amber-400 transition-colors">Scentbird</Link>
+            <Link href="/go/lovable" className="hover:text-amber-400 transition-colors">Lovable 2.0</Link>
           </div>
+        </div>
+        <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-white/[0.04] text-[10px] text-slate-400 flex flex-col sm:flex-row justify-between gap-3">
+          <span>&copy; 2026 Futurestools86 LLC. All rights reserved. Registered Business Entity.</span>
+          <span>Independent Software, Cloud &amp; Lifestyle Verification Directory</span>
         </div>
       </footer>
 
